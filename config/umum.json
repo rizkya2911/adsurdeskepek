@@ -1,0 +1,8 @@
+{
+  "judul": "Surat Keterangan Umum",
+  "isian": {
+    "Tanggal": "time",
+    "NIK": "number",
+    "Nama": "text"
+  }
+}

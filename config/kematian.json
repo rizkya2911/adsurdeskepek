@@ -1,0 +1,9 @@
+{
+  "judul": "Surat Keterangan Kematian",
+  "isian": {
+    "Tanggal": "time",
+    "NIK": "number",
+    "Nama pemohon": "text",
+    "Nama yang meninggal": "text"
+  }
+}
