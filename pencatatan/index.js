@@ -1,5 +1,27 @@
-const renderLetterType = (data) => {
+let data = [];
+let divs = {
+  time: 'type="text" placeholder="YYYY-MM-DD"',
+  number: 'type="number"',
+  text: 'type="text"'
+};
+
+const renderForm = () => {
+  id = document.getElementById('letter-type').value;
+  if (id === -1) return;
+  
+  let ren = '';
+  let form = data[id].isian;
+  for (let key in form) {
+    ren += `<div>${key}<input id="${key}$" {divs[form[key]]}></div>`;
+  }
+  
+  ren += '<button>Catat</button>';
+  document.getElementById('form').innerHTML = ren;
+}
+
+const renderLetterType = () => {
   let elem = document.getElementById('letter-type');
+  elem.value = -1;
   elem.options[0].text = 'Pilih Jenis Surat';
   
   data.forEach((val, id) => {
@@ -24,7 +46,8 @@ const getLetterType = async () => {
   }
   
   if (res.success) {
-    renderLetterType(res.data);
+    data = res.data;
+    renderLetterType();
   }
   else {
     alert(`Terjadi ${res.error}!`);
