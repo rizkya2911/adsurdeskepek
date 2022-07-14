@@ -6,8 +6,9 @@
   
   $res["data"] = array();
   foreach ($dir as $file) {
+    $id = substr($file, 0, -5);
     $data = json_decode(file_get_contents($path.$file), true);
-    array_push($res["data"], $data);
+    $res["data"][$id] = $data;
   }
   
   $res["success"] = true;
