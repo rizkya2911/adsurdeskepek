@@ -1,35 +1,74 @@
-let data = [];
+let data = {};
 let divs = {
   time: 'type="text" placeholder="YYYY-MM-DD"',
   number: 'type="number"',
   text: 'type="text"'
 };
 
+const create = async () => {
+  let req = {
+    type: document.getElementById('letter-type').value
+  };
+  let res = null;
+  
+  for (key in data[req.type].isian) {
+    let tmp = document.getElementById(key).value;
+    
+    if (data[req.type].isian[key] === 'number') {
+      tmp = parseInt(tmp);
+    }
+    
+    req[key] = tmp;
+  }
+  
+  try {
+    await fetch('/api/pencatatan/create.php', {
+      method: 'POST',
+      body: JSON.stringify(req)
+    })
+    .then(response => response.json())
+    .then(data => {res = data});
+  }
+  catch {
+    res = {
+      success: false,
+      error: 'kesalahan internal'
+    }
+  }
+  
+  if (res.success) {
+    alert(`Berhasil tercatat dengan nomor ${res.id}.`);
+  }
+  else {
+    alert(`Terjadi ${res.error}!`);
+  }
+}
+
 const renderForm = () => {
   id = document.getElementById('letter-type').value;
-  if (id === -1) return;
+  if (id === 'none') return;
   
   let ren = '';
   let form = data[id].isian;
   for (let key in form) {
-    ren += `<div>${key}<input id="${key}$" {divs[form[key]]}></div>`;
+    ren += `<div>${key}<input id="${key}" {divs[form[key]]}></div>`;
   }
   
-  ren += '<button>Catat</button>';
+  ren += '<button onClick="create()">Catat</button>';
   document.getElementById('form').innerHTML = ren;
 }
 
 const renderLetterType = () => {
   let elem = document.getElementById('letter-type');
-  elem.value = -1;
+  elem.value = 'none';
   elem.options[0].text = 'Pilih Jenis Surat';
   
-  data.forEach((val, id) => {
+  for (key in data) {
     let item = document.createElement("option");
-    item.value = id.toString();
-    item.text = val.judul;
+    item.value = key;
+    item.text = data[key].judul;
     elem.options.add(item, null);
-  });
+  }
 }
 
 const getLetterType = async () => {
