@@ -7,11 +7,19 @@
   <meta name="author" content="KKN-PPM-UGM 2022-YO023">
   <meta name="description" content="Halaman Pelaporan ADSURDES">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="index.css" rel="stylesheet">
 </head>
 
 <body>
   <a href="/"><button>Kembali</button></a>
   PELAPORAN
+  <select id="letter-type" onChange="getTable()">
+    <option disabled selected value="none">Harap Tunggu</option>
+  </select>
+  dari <input id="begin" type="date" onChange="getTable()">
+  sampai <input id="end" type="date" onChange="getTable()">
+  <div id="table">Pilih jenis surat terlebih dahulu.</div>
+  <script src="index.js"></script>
 </body>
 
 </html>
