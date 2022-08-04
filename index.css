@@ -93,7 +93,7 @@ nav .icon-burger .line {
     background-size: cover;
     z-index: 0;
     margin-bottom: 4px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(img/background-kal.png);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/img/background-kal.png);
 }
 
 .container1 a h6:hover{
