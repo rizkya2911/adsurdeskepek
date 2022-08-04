@@ -34,7 +34,7 @@
     
     $list = load($type);
     $id = count($list);
-    array_push($list, mktime());
+    array_push($list, time());
     save("$type/$id", $data);
     save("$type", $list);
     
