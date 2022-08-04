@@ -1,6 +1,6 @@
 let data = {};
 let divs = {
-  time: 'type="text" placeholder="YYYY-MM-DD"',
+  time: 'type="date"',
   number: 'type="number"',
   text: 'type="text"'
 };
@@ -44,6 +44,16 @@ const create = async () => {
   }
 }
 
+const reset = () => {
+  id = document.getElementById('letter-type').value;
+  if (id === 'none') return;
+  
+  let form = data[id].isian;
+  for (let key in form) {
+    document.getElementById(key).value = '';
+  }
+}
+
 const renderForm = () => {
   id = document.getElementById('letter-type').value;
   if (id === 'none') return;
@@ -51,10 +61,11 @@ const renderForm = () => {
   let ren = '';
   let form = data[id].isian;
   for (let key in form) {
-    ren += `<div>${key}<input id="${key}" {divs[form[key]]}></div>`;
+    ren += `<div>${key}<input id="${key}" ${divs[form[key]]}></div>`;
   }
   
   ren += '<button onClick="create()">Catat</button>';
+  ren += '<button onClick="reset()">Hapus</button>';
   document.getElementById('form').innerHTML = ren;
 }
 
