@@ -141,7 +141,7 @@ nav .icon-burger .line {
     margin-bottom: 24px;
 }
 
-.container1 button{
+.container1 .catat{
         width: 90px;
         height: 36px;
         float: right;
@@ -153,6 +153,24 @@ nav .icon-burger .line {
         color: white;
         border: none;
         cursor: pointer;
+        margin-left: 14px;
         margin-top: 24px;
         margin-bottom: 96px;
+}
+
+.container1 .hapus{
+    width: 90px;
+    height: 36px;
+    float: right;
+    justify-content: right;
+    background: #a00000;;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Poppins';
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 24px;
+    margin-top: 24px;
+    margin-bottom: 96px;
 }

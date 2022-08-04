@@ -20,7 +20,7 @@ const create = async () => {
     
     req[key] = tmp;
   }
-  
+
   try {
     await fetch('/api/pencatatan/create.php', {
       method: 'POST',
@@ -64,8 +64,8 @@ const renderForm = () => {
     ren += `<div>${key}<input id="${key}" ${divs[form[key]]}></div>`;
   }
   
-  ren += '<button onClick="create()">Catat</button>';
-  ren += '<button onClick="reset()">Hapus</button>';
+  ren += '<button class="catat" onClick="create()">Catat</button>';
+  ren += '<button class="hapus" onClick="reset()">Hapus</button>';
   document.getElementById('form').innerHTML = ren;
 }
 
