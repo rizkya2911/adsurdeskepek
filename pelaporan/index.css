@@ -1,3 +1,176 @@
+
+body {
+	padding: 0;
+	margin: 0;
+    background: #F4F4F4;
+    font-family: 'Poppins';
+}
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Poppins';
+	padding: 0 5%;
+	height: 96px;
+	background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav .logo a{
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	font-size: 14px;
+}
+.logo img {
+    margin-top: 12px;
+    height: 72px;
+}
+
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+
+nav .links a {
+	display: block;
+	padding: 1em    ;
+	font-size: 16px;
+	font-weight:500;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+nav .links a:hover{
+    color: #0eb908;
+}
+
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+    color: white;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 3px;
+	background-color: rgb(255, 255, 255);
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+.container1{
+  margin-top:54px;
+  width: 100%;
+  height: 600px;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  margin-bottom: 4px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/background-kal.png);
+}
+
+.container1 .row{
+  margin-top:54px;
+  width: 100%;
+  height: auto;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  margin-bottom: 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.container1 h4{
+  font-size: 32px;
+}
+
+.container1 a{
+  margin-top: -98px;
+  float: right;
+}
+
+.container1 h5{
+  margin-top: 3px;
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+.container1 p{
+  margin-top: -24px;
+}
+
+.container1 input {
+  justify-content: left;
+}
+
+.container1 #form {
+  margin-bottom: 24px;
+}
+
+.container1 button{
+      width: 90px;
+      height: 36px;
+      float: right;
+      justify-content: right;
+      background: #161817;;
+      border-radius: 6px;
+      font-size: 18px;
+      font-family: 'Poppins';
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 24px;
+      margin-bottom: 96px;
+}
+
+.container1 .bungkus{
+ width: 100%; 
+}
+
+.container1 select{
+  margin-right: 24px;
+ }
+
 table,th,td {
   border: 1px solid;
+}
+
+table{
+  width: 100%;
+  text-align: center;
 }
