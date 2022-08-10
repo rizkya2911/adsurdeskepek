@@ -4,7 +4,7 @@ let table = [];
 const renderTable = () => {
   let id = localStorage.type;
   
-  let ren = `<table><tr><th>No</th>`;
+  let ren = `<table class="isi"><tr><th>No</th>`;
   let form = data[id].isian;
   for (let key in form) {
     ren += `<th>${key}</th>`;

@@ -1,3 +1,54 @@
-table,th,td {
+.kop{
+  border-bottom: 6px solid black;
+}
+
+.header .text-1,.text-2 {
+  font-size: 16px;
+}
+
+.header .text-3{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header .text-5{
+  font-size: 14px;
+}
+
+.header .text-6{
+  font-size: 12px;
+}
+
+.judul{
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+img {
+  width: 100px;
+}
+
+.isi, .isi th, .isi td{
   border: 1px solid;
+  text-align: center;
+}
+
+.isi {
+  width: 100%;
+}
+
+.table{
+  width: 100%;
+}
+
+.kop {
+  text-align: center;
+  width: 100%;
+}
+
+.ttd{
+  padding-right: 30px;
+  float: right;
+  text-align: center;
 }
